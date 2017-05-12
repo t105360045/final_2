@@ -27,10 +27,7 @@ public:
 		item = "";
 		price = 0;
 	}
-	~Date()
-	{
-
-	}
+	
 	Date(int a, int b, int c, string d, int e)
 	{
 		year = a;
@@ -109,7 +106,7 @@ public:
 		cout << "歡迎使用本記帳程式\n";
 		while (repeat)
 		{
-			cout << "1.記帳 2.關鍵字查帳 3.日平均花費查帳 : ";
+			cout << "1.記帳 2.關鍵字查帳 3.日花費查帳 : ";
 			cin >> option;
 			switch (option)
 			{
@@ -267,7 +264,7 @@ public:
 	Date search_ymdip()
 	{
 		Date search;
-		Date fail(0, 0, 0, "fail", 0);
+		
 		int key_ok = 0;
 		while (1)
 		{
@@ -329,17 +326,15 @@ public:
 			if (key_ok == 1)
 				break;
 		}
-		if (key_ok == 1)
-			return search;
-		else
-			return fail;
+		if (key_ok == 0)
+			search.item = "fail";
+		return search;
 	}
 
 	Date search_ymd()
 	{
 		Date search;
-		Date fail(0, 0, 0, "fail", 0);
-		int key_ok = 0;
+			int key_ok = 0;
 		while (1)
 		{
 			search.setyear();
@@ -373,10 +368,9 @@ public:
 				break;
 			}
 		}
-		if (key_ok == 1)
-			return search;
-		else
-			return fail;
+		if (key_ok == 0)
+			search.item = "fail";
+		return search;
 	}
 
 
@@ -426,6 +420,10 @@ public:
 		}
 		filePtr.close();
 	}
+	~Date()
+	{
+
+	}
 };
 istream & operator >> (istream& in, Date& obj)
 {
@@ -447,9 +445,6 @@ int main()
 {
 	Date a;
 	a.welcome();
-
-
-	a.~Date();
 	system("pause");
 	return 0;
 }
