@@ -21,13 +21,13 @@ private:
 public:
 	Date()
 	{
-		year = 0;
+		year =0;
 		month = 0;
 		day = 0;
 		item = "";
 		price = 0;
 	}
-	
+
 	Date(int a, int b, int c, string d, int e)
 	{
 		year = a;
@@ -99,8 +99,8 @@ public:
 
 	void welcome()
 	{
-		char option = 0;
-		int repeat = 1;
+		int option = 0;
+		char repeat = 1;
 		string str;
 
 		cout << "歡迎使用本記帳程式\n";
@@ -110,17 +110,17 @@ public:
 			cin >> option;
 			switch (option)
 			{
-			case '1':
+			case 1:
 				write();
 				repeat = wel_re();
 				break;
-			case '2':
+			case 2:
 				cout << "\n請輸入關鍵字 : ";
 				cin >> str;
 				read(str);
 				repeat = wel_re();
 				break;
-			case '3':
+			case 3:
 				total(search_ymd());
 				repeat = wel_re();
 				break;
@@ -133,31 +133,27 @@ public:
 
 	int  wel_re()
 	{
-		char repeat = '3';
+		int repeat = 3;
 		cout << "\n請問要再使用本程式嗎?\n";
-		while (repeat == '3')
+		while (repeat == 3)
 		{
 			cout << "1.要 2.不要 : ";
 			cin >> repeat;
 			switch (repeat)
 			{
-			case '1':
-				repeat = '1';
+			case 1:
+				repeat = 1;
 				break;
-			case '2':
-				repeat = '0';
+			case 2:
+				repeat = 0;
 				cout << "\n歡迎再次使用!\n\n";
 				break;
 			default:
-				repeat = '3';
 				cout << "無效輸入\n\n";
 				break;
 			}
 		}
-		if (repeat == '1')
-			return 1;
-		if (repeat == '0')
-			return 0;
+		return  repeat;
 	}
 	void write()
 	{
@@ -199,6 +195,7 @@ public:
 	{
 		ifstream filePtr;
 		string str;
+		int none = 1;
 		filePtr.open(filename, ios::binary | ios::in);
 		if (!filePtr)
 		{
@@ -217,9 +214,16 @@ public:
 				if (filePtr.eof())
 					break;
 				if (search == inttostr(year) || search == inttostr(month) || search == inttostr(day) || search == inttostr(price) || search == item)
+				{
+					none = 0;
 					cout << *this;
+				}
 
 			}
+		}
+		if (none == 1)
+		{
+			cout << "查無資料\n";
 		}
 		filePtr.close();
 	}
@@ -264,7 +268,7 @@ public:
 	Date search_ymdip()
 	{
 		Date search;
-		
+
 		int key_ok = 0;
 		while (1)
 		{
@@ -334,7 +338,7 @@ public:
 	Date search_ymd()
 	{
 		Date search;
-			int key_ok = 0;
+		int key_ok = 0;
 		while (1)
 		{
 			search.setyear();
@@ -374,7 +378,7 @@ public:
 	}
 
 
-	void total(Date search) 
+	void total(Date search)
 	{
 
 		Date total;
@@ -420,10 +424,7 @@ public:
 		}
 		filePtr.close();
 	}
-	~Date()
-	{
-
-	}
+	 
 };
 istream & operator >> (istream& in, Date& obj)
 {

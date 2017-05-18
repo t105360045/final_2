@@ -1,17 +1,16 @@
-﻿已經開始建置於 2017/5/12 下午 03:27:04。
-     1>節點 2 (Build 目標) 上的專案 "C:\D\c++_code\git\c-_final\final_2\final_2\final_2.vcxproj"。
+﻿已經開始建置於 2017/5/19 上午 01:22:01。
+     1>節點 2 (Build 目標) 上的專案 "C:\D\c++_code\git\final_2\final_2\final_2\final_2.vcxproj"。
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(356,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(357,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (..\..\temp\debug\) contains files shared from another project (final_2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\D\c++_code\final_2\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"..\..\temp\debug\\" /Fd"..\..\temp\debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\source\Source.cpp
          Source.cpp
-     1>c:\d\c++_code\git\c-_final\source\source.cpp(161): warning C4715: 'Date::wel_re' : 不是所有控制路徑都傳回值
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\temp\debug\final_C++.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\..\temp\debug\final_C++.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\temp\debug\final_C++.lib" /MACHINE:X86 ..\..\temp\debug\Source.obj
-         final_2.vcxproj -> C:\D\c++_code\git\c-_final\final_2\final_2\..\..\temp\debug\final_C++.exe
-     1>專案 "C:\D\c++_code\git\c-_final\final_2\final_2\final_2.vcxproj" (Build 目標) 建置完成。
+         final_2.vcxproj -> C:\D\c++_code\git\final_2\final_2\final_2\..\..\temp\debug\final_C++.exe
+     1>專案 "C:\D\c++_code\git\final_2\final_2\final_2\final_2.vcxproj" (Build 目標) 建置完成。
 
 建置成功。
 
-經過時間 00:00:01.03
+經過時間 00:00:01.02
